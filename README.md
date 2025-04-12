@@ -17,7 +17,7 @@ Antes de começar, certifique-se de ter os seguintes itens instalados:
 ## Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/naoentendotu/Gifoteca)
 cd seu-repositorio
 ```
 
