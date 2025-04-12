@@ -49,7 +49,7 @@ yarn lint
 npm run lint
 ```
 
-### Formatate os arquivos
+### Formate os arquivos
 
 ```bash
 yarn format
