@@ -1,6 +1,6 @@
 # Gifoteca
 
-aplicação web que consome api do giphy com vue quasar pinia e tailwind
+A "Gifoteca" é uma aplicação web que integra a API do Giphy para permitir a pesquisa e exibição de gifs de forma interativa. Ela é construída com uma combinação de Vue.js, Quasar, Pinia e Tailwind CSS, o que proporciona uma estrutura robusta e moderna para desenvolvimento.
 
 ## Install the dependencies
 
@@ -37,7 +37,3 @@ npm run format
 ```bash
 quasar build
 ```
-
-### Customize the configuration
-
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).

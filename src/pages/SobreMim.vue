@@ -63,6 +63,20 @@
                 </div>
               </div>
             </q-card-section>
+            <div class="text-justify text-body1 q-px-lg q-pb-md">
+              Sou apaixonada por tecnologia e desenvolvimento de software. Ao longo da minha jornada acadêmica, tenho
+              explorado diversas áreas da computação e, atualmente, estou no sexto semestre do curso de Ciência da
+              Computação.
+              Participo da <strong>Infocorp</strong>, a empresa júnior do <strong> Instituto de Computação</strong> da
+              UFMT, onde trabalho
+              em projetos
+              no cargo de desenvolvedora <strong>Front-end</strong>, adquirindo experiência prática.
+
+              Meu foco está em continuar explorando a área das aplicações web,
+              pois acredito
+              no impacto que pode gerar.
+              Estou sempre aberta a novos desafios e oportunidades de crescimento profissional.
+            </div>
           </q-card>
         </q-expansion-item>
       </q-expansion-item-group>

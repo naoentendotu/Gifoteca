@@ -10,7 +10,7 @@ export const getTrendingGifs = () =>
   api.get('/gifs/trending', {
     params: {
       api_key: apiKey,
-      limit: 25,
+      limit: 100,
     },
   });
 
@@ -19,7 +19,7 @@ export const searchGifs = (term: string) =>
     params: {
       api_key: apiKey,
       q: term,
-      limit: 25,
+      limit: 100,
     },
   });
 
@@ -35,6 +35,6 @@ export const getByCategory = (term: string) =>
     params: {
       api_key: apiKey,
       q: term,
-      limit: 25,
+      limit: 100,
     },
   });
