@@ -10,7 +10,7 @@ yarn
 npm install
 ```
 
-### Se ainda não tiver o Quasar instalado
+### Instalando o Quasar
 
 ```bash
 npm install -g @quasar/cli
