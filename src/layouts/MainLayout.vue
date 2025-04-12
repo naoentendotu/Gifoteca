@@ -1,85 +1,64 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+    <!-- Nav Bar -->
+    <q-drawer v-model="leftDrawerOpen" :mini="miniState" show-if-above bordered behavior="desktop" :width="200"
+      :mini-width="70" @mouseover="miniState = false" @mouseleave="miniState = true" class="bg-white">
+      <q-list class="q-pt-md">
+        <div class="flex flex-center q-pb-md">
+          <q-img src="src/assets/logoGifoteca.png" width="60px" height="60px" contain />
+        </div>
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+        <!-- Menu -->
+        <q-item to="/" exact active-class="text-primary" clickable v-ripple>
+          <q-item-section avatar>
+            <q-icon name="home" :color="$route.path === '/' ? 'primary' : 'black'" />
+          </q-item-section>
+          <q-item-section v-if="!miniState">Home</q-item-section>
+        </q-item>
 
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
+        <q-item to="/favoritos" active-class="text-primary" clickable v-ripple>
+          <q-item-section avatar>
+            <q-icon name="favorite_border" :color="$route.path === '/favoritos' ? 'primary' : 'black'" />
+          </q-item-section>
+          <q-item-section v-if="!miniState">Favoritos</q-item-section>
+        </q-item>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
-        <q-item-label header>
-          Essential Links
-        </q-item-label>
+        <q-item to="/categorias" active-class="text-primary" clickable v-ripple>
+          <q-item-section avatar>
+            <q-icon name="grid_view" :color="$route.path === '/categorias' ? 'primary' : 'black'" />
+          </q-item-section>
+          <q-item-section v-if="!miniState">Categorias</q-item-section>
+        </q-item>
 
-        <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
+        <q-item to="/sobre" active-class="text-primary" clickable v-ripple>
+          <q-item-section avatar>
+            <q-icon name="info" :color="$route.path === '/sobre' ? 'primary' : 'black'" />
+          </q-item-section>
+          <q-item-section v-if="!miniState">Sobre</q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
+    <!-- Header -->
+    <q-header elevated class="bg-primary text-white">
+      <q-toolbar class="justify-between">
+        <div></div>
+        <div class="q-mr-md text-subtitle2">
+          Desenvolvido por Tuliana Andrade
+        </div>
+      </q-toolbar>
+    </q-header>
+
+    <!-- Conteúdo -->
     <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue';
-import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink.vue';
+<script lang="ts" setup>
+import { ref } from 'vue'
 
-const linksList: EssentialLinkProps[] = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-];
-
-const leftDrawerOpen = ref(false);
-
-function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
-}
+const leftDrawerOpen = ref(true)
+const miniState = ref(true)
 </script>
