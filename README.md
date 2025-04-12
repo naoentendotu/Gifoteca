@@ -2,7 +2,7 @@
 
 A "Gifoteca" é uma aplicação web que integra a API do Giphy para permitir a pesquisa e exibição de gifs de forma interativa. Ela é construída com uma combinação de Vue.js, Quasar, Pinia e Tailwind CSS, o que proporciona uma estrutura robusta e moderna para desenvolvimento.
 
-## Install the dependencies
+## Instalar as dependências
 
 ```bash
 yarn
@@ -10,13 +10,19 @@ yarn
 npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Se ainda não tiver o Quasar instalado
+
+```bash
+npm install -g @quasar/cli
+```
+
+### Iniciar o app no modo de desenvolvimento
 
 ```bash
 quasar dev
 ```
 
-### Lint the files
+### Lint dos arquivos
 
 ```bash
 yarn lint
@@ -24,7 +30,7 @@ yarn lint
 npm run lint
 ```
 
-### Format the files
+### Formatar os arquivos
 
 ```bash
 yarn format
@@ -32,7 +38,7 @@ yarn format
 npm run format
 ```
 
-### Build the app for production
+### Construir a aplicação para produção
 
 ```bash
 quasar build
