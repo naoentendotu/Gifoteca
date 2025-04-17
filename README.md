@@ -62,3 +62,10 @@ npm run format
 ```bash
 quasar build
 ```
+---
+
+## 🚧 Melhorias Futuras
+-  👥 Autenticação de Usuário: Login com Google, GitHub ou email para personalização da experiência.
+- 🌙 Modo Escuro: Alternância entre temas claro e escuro para maior conforto visual.
+- 📱 Responsividade Aprimorada: Ajustes finos para uma navegação mais fluida em dispositivos móveis.
+- 🌐 Compartilhamento: Botões para compartilhar gifs diretamente nas redes sociais.
